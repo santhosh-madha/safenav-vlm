@@ -20,7 +20,7 @@ __pycache__/
 .env.*
 
 # Model weights and checkpoints
-models/
+/models/
 checkpoints/
 *.safetensors
 *.gguf
@@ -36,3 +36,9 @@ results/predictions/
 .vscode/
 .idea/
 EOF
+# Local research images
+data/pilot/images/
+data/processed/
+
+# Generated experiment outputs
+results/predictions/
