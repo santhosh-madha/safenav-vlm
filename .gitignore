@@ -1,0 +1,38 @@
+cat > .gitignore <<'EOF'
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environment
+.venv/
+
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment variables / secrets
+.env
+.env.*
+
+# Model weights and checkpoints
+models/
+checkpoints/
+*.safetensors
+*.gguf
+*.bin
+
+# Raw datasets
+data/raw/
+
+# Generated predictions
+results/predictions/
+
+# IDE
+.vscode/
+.idea/
+EOF
