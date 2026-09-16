@@ -12,6 +12,7 @@ from safenav_vlm.models.qwen_vlm import QwenVLM
 from safenav_vlm.prompts.safety_prompt import build_safety_prompt
 from safenav_vlm.utils.image_preprocessing import resize_image
 
+
 SUPPORTED_EXTENSIONS = {".jpg", ".jpeg", ".png", ".webp"}
 
 
@@ -110,9 +111,10 @@ def main() -> None:
             original_width, original_height = image.size
 
         processed_path = (
-            processed_dir
-            / f"{image_path.stem}_1024.jpg"
-        )
+
+        processed_dir
+        / f"{image_path.stem}_{args.max_dimension}.jpg"
+    )
 
         resize_image(
             image_path,
